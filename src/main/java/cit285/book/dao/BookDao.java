@@ -60,6 +60,9 @@ public class BookDao {
 
 			booksList.add(book);
 		}
+		connection.close();
+		preparedStatement.close();
+		resultSet.close();
 		return booksList;
 	}
 

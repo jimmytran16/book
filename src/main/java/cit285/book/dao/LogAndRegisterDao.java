@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.sql.rowset.CachedRowSet;
+
 
 public class LogAndRegisterDao {
 	public static void insertUserData(String user, String password, String FirstName, String LastName, String CompanyName) {
@@ -40,21 +42,19 @@ public class LogAndRegisterDao {
 	}
 	public static ResultSet getUsers() throws SQLException {
 		Connection conn=null;
+		ResultSet dataUser = null;
 		try{
-			
 			conn = ConnectionDao.getSQLConnection();
 			Statement getUser = conn.createStatement(); //get statement reference
-			ResultSet dataUser = getUser.executeQuery("Select UserID,Password,FirstName from User where Type ='1';"); 
-			conn.close();
+			dataUser = getUser.executeQuery("Select UserID,Password,FirstName from User where Type ='1';"); 
 			return dataUser;
 		}catch(Exception e) {System.out.println("Error fetching USERID from SQL "+e);}
-		conn.close();
-		return null;}
+		return null;
+		}
 	public static ResultSet getAdmin() throws SQLException {
 		Connection conn= null;
 		try{
-	
-			 conn = ConnectionDao.getSQLConnection();
+			conn = ConnectionDao.getSQLConnection();
 			Statement getUser = conn.createStatement(); //get statement reference
 			ResultSet dataUser = getUser.executeQuery("Select UserID,Password,FirstName from User where Type ='2';"); 
 			conn.close();

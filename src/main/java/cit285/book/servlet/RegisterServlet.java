@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import cit285.book.dao.ConnectionDao;
 import cit285.book.dao.LogAndRegisterDao;
 import cit285.book.domain.User;
 import cit285.book.service.UserServices;
@@ -32,12 +33,14 @@ public class RegisterServlet extends HttpServlet{
 			String userId = request.getParameter("UserID"); //requests the user id on user input
 			ResultSet dataUser = LogAndRegisterDao.getUsers(); //gets the userID 
 			/*ITERATES THROUGH THE USERID RECORD TO CHECK IF USER EXISTS// IF EXISTS THEN REDIRECT BACK TO REGISTRATION PAGE*/
+			
 			while(dataUser.next()) { 
 				String record = dataUser.getString("UserID");
 				if(userId.equals(record)) {
 					check = false;
 				}
 			}
+			ConnectionDao.closeConnection();
 			if(check==false) {
 				request.getSession().setAttribute("sameEmail","User name already exist! Please choose a different username");
 				request.getSession().setAttribute("sameEmailColor","red");
