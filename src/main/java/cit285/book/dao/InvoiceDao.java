@@ -21,6 +21,6 @@ public class InvoiceDao {
 		setReciept.setInt(5,1);
 		// Execute statement
 		setReciept.executeUpdate();
-
+		connection.close();
 	}
 }

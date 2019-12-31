@@ -18,7 +18,7 @@ public class BookDao {
 	public ArrayList<Book> getBooks() throws SQLException, ClassNotFoundException {
 		ArrayList<Book> booksList = new ArrayList<>();
 
-		Connection connection = null;
+		Connection connection = null;	
 		try {
 			connection = ConnectionDao.getSQLConnection();
 		} catch (Exception e) {
@@ -89,6 +89,8 @@ public class BookDao {
 
 		// Execute statement
 		setBook.executeUpdate();
+		//close connection
+		connection.close();
 
 	}
 
@@ -130,6 +132,7 @@ public class BookDao {
 
 		// Execute statement
 		updateBook.executeUpdate();
+		connection.close();
 
 	}
 
@@ -152,6 +155,7 @@ public class BookDao {
 
 		Statement secondStmt = connection.createStatement();
 		secondStmt.executeQuery("SET foreign_key_checks = 1");
+		connection.close();
 
 	}
 
@@ -192,6 +196,7 @@ public class BookDao {
 			}
 			book.setAuthor(author);
 		}
+		connection.close();
 		return book;
 	}
 
@@ -207,7 +212,7 @@ public class BookDao {
 		PreparedStatement preparedStatementBook = connection.prepareStatement("select image from Book where BookID=?");
 		preparedStatementBook.setInt(1, bookID);
 		ResultSet resultSet = preparedStatementBook.executeQuery();
-		
+		connection.close();
 		return resultSet;
 	}
 

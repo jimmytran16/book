@@ -36,6 +36,7 @@ public class UserDao {
 							resultset.getString(4),resultset.getString(5));
 					userList.add(user);
 				}
+				connection.close();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

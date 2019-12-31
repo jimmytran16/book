@@ -27,7 +27,7 @@ public class AuthorDao {
 			author.setAuthorlastname(resultSet.getString(3));
 			authors.add(author);
 		}
-
+		connection.close();
 		return authors;
 	}
 
@@ -46,7 +46,7 @@ public class AuthorDao {
 			System.out.println(authorID);
 		}
 		
-
+		connection.close();
 		return authorID;
 	}
 
@@ -63,6 +63,6 @@ public class AuthorDao {
 
 		// Execute statement
 		setAuthor.executeUpdate();
-
+		connection.close();
 	}
 }
