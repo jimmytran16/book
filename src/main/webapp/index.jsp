@@ -24,7 +24,7 @@
 
 <style>
 .buy_button{
-	postion: relative;
+	position: relative;
 	left: 30px;
 	}
 </style>

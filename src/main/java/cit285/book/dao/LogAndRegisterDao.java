@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.sql.rowset.CachedRowSet;
-
 
 public class LogAndRegisterDao {
 	public static void insertUserData(String user, String password, String FirstName, String LastName, String CompanyName) {

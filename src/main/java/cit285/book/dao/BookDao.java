@@ -45,9 +45,9 @@ public class BookDao {
 			book.setEdition(resultSet.getString(5));
 			book.setYear(resultSet.getInt(6));
 			book.setImage(resultSet.getString(7));
-			book.setPrice(resultSet.getDouble(9));
+			book.setPrice(resultSet.getDouble(8));
 			// Get the author for this book
-			preparedStatement.setInt(1, resultSet.getInt(8));
+			preparedStatement.setInt(1, resultSet.getInt(9));
 			ResultSet rset = preparedStatement.executeQuery();
 			if (rset.next()) {
 				Author author = new Author();
