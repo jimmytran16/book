@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.Set;	
 
 import org.junit.Test;
 
@@ -35,7 +35,7 @@ public class AppUnitTest{
 	public void TestingBookInventorySize() throws ClassNotFoundException, SQLException {
 		BookDao test = new BookDao();
 		ArrayList<Book> bookListTest= new ArrayList<Book>(test.getBooks());
-		assertEquals(7,bookListTest.size());
+		assertEquals(8,bookListTest.size());
 	}
 	//Check if existing admin is retrieved from database
 	@Test
