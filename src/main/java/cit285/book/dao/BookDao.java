@@ -87,8 +87,8 @@ public class BookDao {
 		setBook.setString(5, book.getEdition());
 		setBook.setInt(6, book.getYear());
 		setBook.setString(7,book.getImage());
-		setBook.setDouble(9, book.getPrice());
-		setBook.setInt(8, book.getAuthor().getAuthorid());
+		setBook.setDouble(8, book.getPrice());
+		setBook.setInt(9, book.getAuthor().getAuthorid());
 
 		// Execute statement
 		setBook.executeUpdate();
@@ -149,7 +149,7 @@ public class BookDao {
 		}
 		// Create statement
 		Statement firstStmt = connection.createStatement();
-		firstStmt.executeQuery("SET foreign_key_checks = 0");
+//		firstStmt.executeQuery("SET foreign_key_checks = 0");
 
 		PreparedStatement deleteBook = connection.prepareStatement("delete from Book where bookID = ?");
 		deleteBook.setInt(1, bookID);
@@ -157,7 +157,7 @@ public class BookDao {
 		deleteBook.execute();
 
 		Statement secondStmt = connection.createStatement();
-		secondStmt.executeQuery("SET foreign_key_checks = 1");
+//		secondStmt.executeQuery("SET foreign_key_checks = 1");
 		connection.close();
 
 	}

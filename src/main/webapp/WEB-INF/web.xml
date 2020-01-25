@@ -67,114 +67,14 @@
 		<servlet-name>AddReciept</servlet-name>
 		<url-pattern>/proccess/*</url-pattern>
 	</servlet-mapping>
-
+	
 	<servlet>
-		<servlet-name>Detail</servlet-name>
-		<servlet-class>cit285.book.presentation.web.DetailServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Detail</servlet-name>
-		<url-pattern>/detail/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Book</servlet-name>
-		<servlet-class>cit285.book.presentation.web.BookServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Book</servlet-name>
-		<url-pattern>/books/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Author</servlet-name>
-		<servlet-class>cit285.book.presentation.web.AuthorServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Author</servlet-name>
-		<url-pattern>/authors/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Add Books</servlet-name>
-		<servlet-class>cit285.book.presentation.web.AddBookServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Add Books</servlet-name>
-		<url-pattern>/add_books/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Add Authors</servlet-name>
-		<servlet-class>cit285.book.presentation.web.AddAuthorServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Add Authors</servlet-name>
-		<url-pattern>/add_authors/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Update Books</servlet-name>
-		<servlet-class>cit285.book.presentation.web.UpdateBookServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Update Books</servlet-name>
-		<url-pattern>/update_books/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Update Authors</servlet-name>
-		<servlet-class>cit285.book.presentation.web.UpdateAuthorServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Update Authors</servlet-name>
-		<url-pattern>/update_authors/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Admin Page</servlet-name>
-		<servlet-class>cit285.book.presentation.web.AdminServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Admin Page</servlet-name>
-		<url-pattern>/admin_page/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Delete Book</servlet-name>
-		<servlet-class>cit285.book.presentation.web.DeleteBookServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Delete Book</servlet-name>
-		<url-pattern>/delete_book/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Delete Author</servlet-name>
-		<servlet-class>cit285.book.presentation.web.DeleteAuthorServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Delete Author</servlet-name>
-		<url-pattern>/delete_author/*</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>ImageProducerServlet</servlet-name>
-		<servlet-class>cit285.book.presentation.web.ImageServlet</servlet-class>
+		<servlet-name>DeleteBook</servlet-name>
+		<servlet-class>cit285.book.servlet.deleteBookServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ImageProducerServlet</servlet-name>
-		<url-pattern>/image</url-pattern>
+		<servlet-name>DeleteBook</servlet-name>
+		<url-pattern>/bookdeletion/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>

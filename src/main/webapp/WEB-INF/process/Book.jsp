@@ -66,7 +66,7 @@
 				<td><%=book.getPrice()%></td>
 				
 				<td>
-				<form action="deleteServlet" method="post"><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="bookid" value="<%=bookid %>" >Delete</button></form>
+				<a href="bookdeletion?bookid=<%=bookid%>"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Delete</button></a>
 				</td>
 				
 			</tr>
