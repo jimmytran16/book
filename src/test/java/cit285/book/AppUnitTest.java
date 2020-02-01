@@ -20,15 +20,15 @@ public class AppUnitTest{
 	public void TestingGetBookWithID() throws ClassNotFoundException, SQLException {
 		BookDao test = new BookDao();
 		Book bookOutput = new Book();
-		bookOutput = test.getBookWithID(1111);
+		bookOutput = test.getBookWithID(117);
 		String testTitle= bookOutput.getTitle();
 		String testEditor = bookOutput.getEditor();
 		String testEdition = bookOutput.getEdition();
 		int testYear = bookOutput.getYear();
-		assertEquals("Java Programming",testTitle);
-		assertEquals("Harry Smith",testEditor);
-		assertEquals("2",testEdition);
-		assertEquals(2020,testYear);
+		assertEquals("Introduction to Java",testTitle);
+		assertEquals("Daniel Liang",testEditor);
+		assertEquals("11",testEdition);
+		assertEquals(2008,testYear);
 	}
 	//Check if book inventory is the correct amount
 	@Test

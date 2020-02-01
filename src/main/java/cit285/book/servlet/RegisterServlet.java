@@ -59,6 +59,7 @@ public class RegisterServlet extends HttpServlet{
 			String Zip = request.getParameter("userZip");
 			String Country = request.getParameter("userCountry");
 			String emailAddress= request.getParameter("userEmail");
+			User user = new User(userId,password,FirstName,LastName,companyName,Address,AddressTwo,City,state,Zip,Country,emailAddress);
 			
 			
 			/*INSERTS USER DATA INTO MYSQL*/
@@ -69,6 +70,8 @@ public class RegisterServlet extends HttpServlet{
 			/*RESET the userList*/
 			HttpSession sess = request.getSession();
 			sess.setAttribute("FirstName",FirstName);
+			sess.setAttribute("userID",userId);
+			sess.setAttribute("userInfo",user);
 			UserServices userServices = new UserServices();
 			update_user_list = userServices.getUsers();
 			sess.setAttribute("userList",update_user_list);

@@ -44,7 +44,6 @@ public class LoginServlet extends HttpServlet{
 		//if the user list doesn't exist already get the list
 		
 		if(sess.getAttribute("userList")==null) {
-
 			UserServices userServices = new UserServices();
 			users = userServices.getUsers();
 			sess.setAttribute("userList",users);		
