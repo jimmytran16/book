@@ -7,6 +7,7 @@
 <html>
 
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="ISO-8859-1">
     <title>Insert title here</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
